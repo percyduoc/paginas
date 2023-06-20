@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="index.js">
+    <title>Document</title>
+  <script>
+    import $ from 'https://cdn.skypack.dev/jquery'
+  </script>
+
+  <script>
+    
+    $('#bEnviar').on('click',function() {
+        alert('hola mundo')
+        var nombre = $("#itnombre").val();
+        var correo = $("#itcorreo").val();
+        var asunto = $("#itasunto").val();
+
+        if(nombre ==""){
+            $("#mensaje1").fadeIn();
+            return false;
+
+        }
+    });
+    
+  </script>
+
+    
+</head>
+<body>
+    <div class="container">
+        <form id="miformulario">  
+
+            <label >*nombre</label><br/>
+            <input type="text" id="itnombre" class="campo"> <br />
+            <div id="mensaje1" class="errores">dame tu pinche nombre </div>
+
+            <label >*Email</label><br/>
+            <input type="text" id="itcorreo" class="campo"> <br />
+            <div id="mensaje2" class="errores">dame tu pinche nombre </div>
+
+            <label >*Asunto</label><br/>
+            <input type="text" id="itasunto" class="campo"> <br />
+            <div id="mensaje3" class="errores">dame tu pinche nombre </div>
+
+
+            <input type="submit" id="bEnviar" value="Enviar datos" class="boton">
+
+            
+        </form>
+
+
+    </div>
+</body>
+
+  
+</html>
